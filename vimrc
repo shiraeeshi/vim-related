@@ -120,8 +120,10 @@ autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
 " ctrlp-related setting
 set runtimepath^=/usr/share/vim/vim74/bundle/ctrlp.vim
 
-" enable pathogen
-execute pathogen#infect()
+" The default setting of 'laststatus' is for the statusline to not appear
+" until a split is created. If you want it to appear all the time, add the
+" following to your vimrc: set laststatus=2
+set laststatus=2
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
