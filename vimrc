@@ -48,7 +48,7 @@ set rtp+=/usr/share/vim/vim74/bundle/Vundle.vim
 call vundle#begin('/usr/share/vim/vim74/bundle')
 
 " let Vundle manage Vundle, required
-Plugin 'VindleVim/Vindle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-classpath'
@@ -57,7 +57,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
-Plugin 'ctrlpvim/ctrlp'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end() " required
 " Uncomment the following to have Vim load indentation rules and plugins
