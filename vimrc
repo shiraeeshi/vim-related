@@ -51,6 +51,7 @@ call vundle#begin('/usr/share/vim/vim74/bundle')
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-salve'
 Plugin 'tpope/vim-fireplace'
@@ -64,6 +65,7 @@ call vundle#end() " required
 " according to the detected filetype.
 if has("autocmd")
   filetype plugin indent on " required
+  autocmd BufReadPost fugitive://* set bufhidden=delete
 endif
 
 " To ignore plugin indent changes, instead use:
@@ -95,7 +97,7 @@ set copyindent    " copy the previous indentation on autoindenting
 "set number        " always show line numbers
 set shiftwidth=4  " number of spaces to use for autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
-set showmatch     " set show matching parenthesis
+"set showmatch     " set show matching parenthesis
 set ignorecase    " ignore case when searching
 set smartcase     " ignore case if search pattern is all lowercase,
                     "    case-sensitive otherwise
@@ -115,6 +117,7 @@ cmap w!! w !sudo tee % >/dev/null
 
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype scala setlocal ts=2 sw=2 expandtab
+autocmd Filetype clj setlocal ts=2 sw=2 showmatch expandtab
 autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
 
 " ctrlp-related setting
@@ -123,7 +126,7 @@ set runtimepath^=/usr/share/vim/vim74/bundle/ctrlp.vim
 " The default setting of 'laststatus' is for the statusline to not appear
 " until a split is created. If you want it to appear all the time, add the
 " following to your vimrc: set laststatus=2
-set laststatus=2
+"set laststatus=2
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
