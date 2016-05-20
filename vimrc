@@ -110,6 +110,8 @@ set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 
 set pastetoggle=<F2> " pressing F2 will disable autoformatting when pasting
+let mapleader = ","
+nmap <leader>ne :NERDTreeToggle<cr>
 " ,/ to clear highlighted search
 nmap <silent> ,/ :nohlsearch<CR>
 " when you forgot to sudo before editing
