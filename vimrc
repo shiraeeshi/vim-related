@@ -59,7 +59,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'yegappan/grep'
+Plugin 'shiraeeshi/grep'
 
 call vundle#end() " required
 " Uncomment the following to have Vim load indentation rules and plugins
