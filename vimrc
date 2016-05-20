@@ -110,8 +110,11 @@ set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 
 set pastetoggle=<F2> " pressing F2 will disable autoformatting when pasting
+" ,ne to toggle nerdtree
 let mapleader = ","
 nmap <leader>ne :NERDTreeToggle<cr>
+" to find and grep what's in buffer
+nnoremap <leader>s :exec ':! find . -name "*.' . expand('%:e') . '" -exec grep -H "<C-R>0" {} \;'
 " ,/ to clear highlighted search
 nmap <silent> ,/ :nohlsearch<CR>
 " when you forgot to sudo before editing
