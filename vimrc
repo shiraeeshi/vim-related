@@ -60,7 +60,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'embear/vim-localvimrc'
-Plugin 'yegappan/grep'
+Plugin 'shiraeeshi/grep' " Plugin 'yegappan/grep'
 Plugin 'leafgarland/typescript-vim'
 
 call vundle#end() " required
