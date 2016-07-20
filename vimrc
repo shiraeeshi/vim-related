@@ -59,7 +59,9 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'shiraeeshi/grep'
+Plugin 'embear/vim-localvimrc'
+Plugin 'yegappan/grep'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end() " required
 " Uncomment the following to have Vim load indentation rules and plugins
@@ -111,6 +113,7 @@ set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 
 set pastetoggle=<F2> " pressing F2 will disable autoformatting when pasting
+
 " ,ne to toggle nerdtree
 let mapleader = ","
 nmap <leader>ne :NERDTreeToggle<cr>
