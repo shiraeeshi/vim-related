@@ -63,7 +63,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'embear/vim-localvimrc'
 Plugin 'shiraeeshi/grep' " Plugin 'yegappan/grep'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'vim-scripts/Conque-Shell'
+Plugin 'jewes/Conque-Shell'
 
 call vundle#end() " required
 " Uncomment the following to have Vim load indentation rules and plugins
