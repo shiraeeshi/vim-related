@@ -41,11 +41,12 @@ endif
 "set hidden		" Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 
+set nocompatible  " be iMproved, required (by vundle)
 filetype off " required (by vundle)
 
 " set the runtime path to include Vundle and initialize
-set rtp+=/usr/share/vim/vim74/bundle/Vundle.vim
-call vundle#begin('/usr/share/vim/vim74/bundle')
+set rtp+=/usr/share/vim/vim80/bundle/Vundle.vim
+call vundle#begin('/usr/share/vim/vim80/bundle')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -62,6 +63,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'embear/vim-localvimrc'
 Plugin 'shiraeeshi/grep' " Plugin 'yegappan/grep'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'vim-scripts/Conque-Shell'
 
 call vundle#end() " required
 " Uncomment the following to have Vim load indentation rules and plugins
@@ -130,12 +132,18 @@ autocmd Filetype clj setlocal ts=2 sw=2 showmatch expandtab
 autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
 
 " ctrlp-related setting
-set runtimepath^=/usr/share/vim/vim74/bundle/ctrlp.vim
+set runtimepath^=/usr/share/vim/vim80/bundle/ctrlp.vim
 
 " The default setting of 'laststatus' is for the statusline to not appear
 " until a split is created. If you want it to appear all the time, add the
 " following to your vimrc: set laststatus=2
 "set laststatus=2
+
+" ctrl-^ to switch to cyrillic
+set keymap=russian-jcukenwin  
+set iminsert=0  
+set imsearch=0  
+highlight lCursor guifg=NONE guibg=Cyan
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
