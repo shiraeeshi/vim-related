@@ -1,0 +1,6 @@
+from https://github.com/Shougo/vimproc.vim
+run :PluginInstall in vim
+go to vimproc plugin folder (e.g. /usr/share/vim/vim80/bundle/vimproc)
+run make command:
+
+> make
