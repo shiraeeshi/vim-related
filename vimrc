@@ -53,7 +53,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-classpath'
+"Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-salve'
 Plugin 'tpope/vim-fireplace'
 Plugin 'derekwyatt/vim-scala'
@@ -64,6 +64,11 @@ Plugin 'embear/vim-localvimrc'
 Plugin 'shiraeeshi/grep' " Plugin 'yegappan/grep'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'jewes/Conque-Shell'
+Plugin 'vim-scripts/genutils'
+Plugin 'albfan/vim-breakpts'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'Raimondi/delimitMate'
+Plugin 'mhartington/vim-angular2-snippets'
 
 call vundle#end() " required
 " Uncomment the following to have Vim load indentation rules and plugins
@@ -125,11 +130,27 @@ nnoremap <leader>s :exec ':! find . -name "*.' . expand('%:e') . '" -exec grep -
 nmap <silent> ,/ :nohlsearch<CR>
 " when you forgot to sudo before editing
 cmap w!! w !sudo tee % >/dev/null 
+" replace a word with a contents of a paste buffer
+":map <C-j> cw<C-r>0<ESC>
+:map <C-j> "_cw<C-r>"<ESC>
+
+" ctrl-enter to increase padding of the newly created line
+imap <NL> <ENTER><ESC>ko
+
+" let ctrlp consider the folder, which the user was in when he entered vim, as
+" a root of the project, without relying on git structure
+let g:ctrlp_working_path_mode = 0
+let g:Grep_Skip_Dirs = 'node_modules,build,target'
+set wildignore+=*/node_modules,*/build,*/target,*.pyc
 
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype scala setlocal ts=2 sw=2 expandtab
 autocmd Filetype clj setlocal ts=2 sw=2 showmatch expandtab
-autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 noexpandtab
+autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 noexpandtab
+autocmd Filetype coffee setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype less setlocal ts=2 sw=2 sts=0 expandtab
 
 " ctrlp-related setting
 set runtimepath^=/usr/share/vim/vim80/bundle/ctrlp.vim
