@@ -46,7 +46,8 @@ filetype off " required (by vundle)
 
 " set the runtime path to include Vundle and initialize
 set rtp+=/usr/share/vim/vim80/bundle/Vundle.vim
-call vundle#begin('/usr/share/vim/vim80/bundle')
+let bundle_dir = '/usr/share/vim/vim80/bundle'
+call vundle#begin(bundle_dir)
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -265,6 +266,11 @@ imap <expr><TAB>
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory=bundle_dir . '/snippets'
 " </neosnippet-settings>
 
 " Source a global configuration file if available

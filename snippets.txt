@@ -1,0 +1,2 @@
+create 'snippets' directory in bundle directory.
+copy snippets into 'snippets' directory (create a subdirectory for filetype, e.g. 'bundle/snippets/typescript' for typescript).
