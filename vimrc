@@ -68,6 +68,9 @@ Plugin 'vim-scripts/genutils'
 Plugin 'albfan/vim-breakpts'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'Raimondi/delimitMate'
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 Plugin 'mhartington/vim-angular2-snippets'
 
 call vundle#end() " required
