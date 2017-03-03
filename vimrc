@@ -152,8 +152,8 @@ set wildignore+=*/node_modules,*/build,*/target,*.pyc
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype scala setlocal ts=2 sw=2 expandtab
 autocmd Filetype clj setlocal ts=2 sw=2 showmatch expandtab
-autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 noexpandtab
-autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 noexpandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype coffee setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype less setlocal ts=2 sw=2 sts=0 expandtab
@@ -182,6 +182,7 @@ let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:localvimrc_event = ["BufReadPre"]
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
