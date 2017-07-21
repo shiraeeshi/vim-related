@@ -75,6 +75,7 @@ Plugin 'Shougo/neosnippet-snippets'
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/vimshell'
 Plugin 'mhartington/vim-angular2-snippets'
+Plugin 'yegappan/mru'
 
 call vundle#end() " required
 " Uncomment the following to have Vim load indentation rules and plugins
