@@ -131,6 +131,8 @@ set pastetoggle=<F2> " pressing F2 will disable autoformatting when pasting
 " ,ne to toggle nerdtree
 let mapleader = ","
 nmap <leader>ne :NERDTreeToggle<cr>
+" ,nr to toggle mru
+nmap <leader>nr :MRU<cr>
 " to find and grep what's in buffer
 nnoremap <leader>s :exec ':! find . -name "*.' . expand('%:e') . '" -exec grep -H "<C-R>0" {} \;'
 " ,/ to clear highlighted search
