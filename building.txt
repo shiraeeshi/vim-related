@@ -60,3 +60,18 @@ sudo update-alternatives --install "/usr/bin/editor" "editor" "/usr/local/bin/vi
 sudo update-alternatives --set vim "/usr/local/bin/vim"
 sudo update-alternatives --set vi "/usr/local/bin/vim"
 sudo update-alternatives --set editor "/usr/local/bin/vim"
+
+----------------------------------
+
+see https://github.com/Shougo/neosnippet.vim/issues/301
+
+Error detected while processing function neosnippet#init#_initialize[4]..<SNR>10
+7_initialize_cache[2]..neosnippet#commands#_make_cache[19]..neosnippet#parser#_p
+arse_snippets[11]..<SNR>117_writefile:
+line    3:
+E482: Can't create file /home/<USER>/.cache/neosnippet/=+home=+<USER>=+.vim=+plugged=+ne
+osnippet-snippets=+neosnippets=+_.snip
+
+I think your USER/.cache or USER/.cache/neosnippet permissions are not writable.
+My ESP skill result: You have executed sudo vim and created not writable directories.
+Please upload ls -l result in them.
