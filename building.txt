@@ -1,5 +1,7 @@
 from https://gist.github.com/webgefrickel/5f86346208be23a523e0c4ad7674dca7
 
+(also see https://gist.github.com/odiumediae/3b22d09b62e9acb7788baf6fdbb77cf8 (Install Vim 8 with Python, Python 3, Ruby and Lua support on Ubuntu 16.04))
+
 change 74 to 80 if your'e building vim80
 
 ----------------------------------
