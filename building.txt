@@ -45,3 +45,18 @@ vim can't open file syntax.vim, need to add this in script
 
 sudo mkdir /usr/share/vim/vim74
 sudo cp -fr runtime/* /usr/share/vim/vim74/
+
+----------------------------------
+
+from https://ubuntuforums.org/archive/index.php/t-2213196.html
+
+# install /usr/local/bin/vim as alternative for vi, vim, and editor
+sudo update-alternatives --install "/usr/bin/vim" "vim" "/usr/local/bin/vim" 1
+sudo update-alternatives --install "/usr/bin/vi" "vi" "/usr/local/bin/vim" 1
+sudo update-alternatives --install "/usr/bin/editor" "editor" "/usr/local/bin/vim" 1
+
+
+# set /usr/local/bin/vim as default for vi, vim and editor
+sudo update-alternatives --set vim "/usr/local/bin/vim"
+sudo update-alternatives --set vi "/usr/local/bin/vim"
+sudo update-alternatives --set editor "/usr/local/bin/vim"
