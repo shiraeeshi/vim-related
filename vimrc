@@ -45,8 +45,8 @@ set nocompatible  " be iMproved, required (by vundle)
 filetype off " required (by vundle)
 
 " set the runtime path to include Vundle and initialize
-set rtp+=/usr/share/vim/vim80/bundle/Vundle.vim
-let bundle_dir = '/usr/share/vim/vim80/bundle'
+set rtp+=/usr/share/vim/vim81/bundle/Vundle.vim
+let bundle_dir = '/usr/share/vim/vim81/bundle'
 call vundle#begin(bundle_dir)
 
 " let Vundle manage Vundle, required
@@ -162,7 +162,7 @@ autocmd Filetype css setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype less setlocal ts=2 sw=2 sts=0 expandtab
 
 " ctrlp-related setting
-set runtimepath^=/usr/share/vim/vim80/bundle/ctrlp.vim
+set runtimepath^=/usr/share/vim/vim81/bundle/ctrlp.vim
 
 " The default setting of 'laststatus' is for the statusline to not appear
 " until a split is created. If you want it to appear all the time, add the
@@ -277,6 +277,9 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory=bundle_dir . '/snippets'
 " </neosnippet-settings>
+
+" set bracketed mode off
+set t_BE="
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
