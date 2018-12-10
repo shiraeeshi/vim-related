@@ -160,6 +160,7 @@ autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype coffee setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype less setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype haskell setlocal ts=2 sw=2 sts=0 expandtab
 
 " ctrlp-related setting
 set runtimepath^=/usr/share/vim/vim81/bundle/ctrlp.vim
@@ -279,7 +280,7 @@ let g:neosnippet#snippets_directory=bundle_dir . '/snippets'
 " </neosnippet-settings>
 
 " set bracketed mode off
-set t_BE="
+set t_BE=
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
