@@ -1,0 +1,7 @@
+from https://superuser.com/a/235524
+
+having --with-features=normal
+having --enable-gui
+having --with-x
+
+you should get your xterm-clipboard
