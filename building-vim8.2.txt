@@ -21,6 +21,7 @@ Run following command in vimtemp directory...
 
 ./configure \
 --enable-multibyte \
+--enable-luainterp=yes \
 --enable-perlinterp=dynamic \
 --enable-rubyinterp=dynamic \
 --with-ruby-command=/usr/bin/ruby \
